@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #add8e6;
+}
+
+.navbar {
+    background: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Offcanvas di sebelah kiri */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -180px;
+    width: 180px;
+    height: 100%;
+    background: blue;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+.offcanvas.open {
+    left: 0;
+}
+
+.close-btn {
+    background: yellow;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    text-align: right;
+    padding: 10px 20px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    padding: 15px 20px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-list .dropdown-menu {
+    display: none;
+    background: blue;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list .dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.hero {
+    background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+    color: red;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 56px;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.book img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}

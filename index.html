@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Buku</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <a href="#" class="navbar-brand">BukuKu</a>
+    </nav>
+
+    <div class="offcanvas" id="offcanvasMenu">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Koleksi</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown(event)">Kategori ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Fiksi</a></li>
+                    <li><a href="#">Non-Fiksi</a></li>
+                    <li><a href="#">Edukasi</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <header class="hero">
+        <h1>Selamat Datang di BukuKu</h1>
+        <p>Temukan berbagai macam buku menarik untuk Anda.</p>
+    </header>
+
+    <section class="content">
+        <h2>Rekomendasi Buku</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Buku 1">
+                <h3>Judul Buku 1</h3>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Buku 2">
+                <h3>Judul Buku 2</h3>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Buku 3">
+                <h3>Judul Buku 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BukuKu - Semua Hak Dilindungi</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
