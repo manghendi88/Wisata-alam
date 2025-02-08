@@ -3,60 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Buku</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wisata Alam</title>
 </head>
 <body>
-
-    <nav class="navbar">
-        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-        <a href="#" class="navbar-brand">BukuKu</a>
-    </nav>
-
-    <div class="offcanvas" id="offcanvasMenu">
-        <button class="close-btn" onclick="toggleMenu()">✖</button>
-        <ul class="nav-list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Koleksi</a></li>
-            <li class="dropdown">
-                <a href="#" onclick="toggleDropdown(event)">Kategori ▼</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Fiksi</a></li>
-                    <li><a href="#">Non-Fiksi</a></li>
-                    <li><a href="#">Edukasi</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <header class="hero">
-        <h1>Selamat Datang di BukuKu</h1>
-        <p>Temukan berbagai macam buku menarik untuk Anda.</p>
+    <header>
+        <div class="container">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <div class="logo">Wisata Alam</div>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#">Berita</a></li>
+                <li><a href="#">Topik</a></li>
+                <li><a href="#">Video</a></li>
+                <li><a href="#">Tentang</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="content">
-        <h2>Rekomendasi Buku</h2>
-        <div class="book-list">
-            <div class="book">
-                <img src="https://via.placeholder.com/150" alt="Buku 1">
-                <h3>Judul Buku 1</h3>
+    <main>
+        <!-- Video Gallery Section (di atas artikel) -->
+        <section class="video-gallery">
+            <div class="container">
+                <h2>Video Wisata Alam</h2>
+                <div class="video-container">
+                    <div class="video-item">
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&show_text=0&width=500" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&show_text=0&width=500" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&show_text=0&width=500" width="500" height="281" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                    </div>
+                </div>
             </div>
-            <div class="book">
-                <img src="https://via.placeholder.com/150" alt="Buku 2">
-                <h3>Judul Buku 2</h3>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles">
+            <div class="container">
+                <article>
+                    <img src="image1.jpg" alt="Artikel 1">
+                    <h2>Destinasi Alam Paling Indah</h2>
+                    <p>Jelajahi tempat-tempat alam yang menawarkan pemandangan luar biasa.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </article>
+                <article>
+                    <img src="image2.jpg" alt="Artikel 2">
+                    <h2>Petualangan Seru di Alam</h2>
+                    <p>Menemukan pengalaman petualangan yang tak terlupakan di alam bebas.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </article>
+                <article>
+                    <img src="image3.jpg" alt="Artikel 3">
+                    <h2>Keajaiban Alam yang Harus Dikunjungi</h2>
+                    <p>Berbagai keajaiban alam yang menunggu untuk ditemukan.</p>
+                    <a href="#">Baca Selengkapnya</a>
+                </article>
             </div>
-            <div class="book">
-                <img src="https://via.placeholder.com/150" alt="Buku 3">
-                <h3>Judul Buku 3</h3>
+        </section>
+
+        <section class="more-articles">
+            <div class="container">
+                <a href="#">Lihat Semua Berita</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 BukuKu - Semua Hak Dilindungi</p>
+        <div class="container">
+            <p>&copy; 2025 Wisata Alam. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navMenu = document.getElementById('nav-menu');
 
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
